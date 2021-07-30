@@ -143,11 +143,13 @@ address {
 
 .contacts-nav {
   display: flex;
+  align-items: center;
   margin-left: auto;
 }
 
 .contacts-nav .link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -270,10 +272,8 @@ address {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 270px;
-  height: 120px;
-
+  padding: 25px 0;
+  border-radius: 4px;
   background-color: var(--button-background-color);
 }
 
@@ -300,7 +300,6 @@ address {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 0px;
 
   background-color: var(--button-background-color);
 }
@@ -344,13 +343,12 @@ address {
 
 .list-link {
   display: flex;
-
-  width: 206px;
-  height: 44px;
+  justify-content: center;
   margin-top: 16px;
-  margin-bottom: 30px;
-  margin-left: 32px;
-  margin-right: 32px;
+}
+
+.list-link .item-link + .item-link {
+  margin-left: 10px;
 }
 
 .link-item {
@@ -360,10 +358,10 @@ address {
 
 .team-link {
   display: flex;
-  height: 44px;
-  width: 44px;
+  padding: 12px;
   align-items: center;
   justify-content: center;
+
   border-radius: 50%;
   color: var(--color-link);
 }
@@ -388,8 +386,7 @@ address {
 
 .client-link {
   display: flex;
-  height: 92px;
-  width: 170px;
+  padding: 16px 32px;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--color-link);
@@ -470,10 +467,6 @@ address {
 
 .footer-list-link {
   display: flex;
-  justify-content: space-between;
-
-  width: 206px;
-  height: 44px;
 }
 
 .social-links {
@@ -482,8 +475,7 @@ address {
 
 .footer-link {
   display: flex;
-  height: 44px;
-  width: 44px;
+  padding: 12px;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
@@ -494,6 +486,10 @@ address {
 .footer-link:hover,
 .footer-link:focus {
   background-color: var(--accent-color);
+}
+
+.footer-list-link .item-link + .item-link {
+  margin-left: 10px;
 }
 
 .footer-icon {
@@ -560,7 +556,8 @@ address {
   border: none;
 }
 
-.project-list .link:hover {
+.project-list .link:hover,
+.project-list .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
